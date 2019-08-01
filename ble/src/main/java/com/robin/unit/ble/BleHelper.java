@@ -13,17 +13,21 @@ public interface BleHelper {
      *
      * @return 初始化结果
      */
-    boolean init(Activity activity);
+    BleHelper init(boolean sysBleBroadcast,BleListener listener);
 
     /**
      * 启动蓝牙
      */
-    void openBle(BleListener listener);
+    void openBle();
 
     /**
      * 关闭蓝牙
      */
     void closeBle();
+
+    void searchNewBle();
+
+    void searchBleList();
 
     /**
      * 启动回调处理
@@ -33,4 +37,9 @@ public interface BleHelper {
      * @param data        可携带的数据
      */
     void onSet(int requestCode, int resultCode, Intent data);
+
+    /**
+     * 销毁
+     */
+    void onDestroy();
 }
