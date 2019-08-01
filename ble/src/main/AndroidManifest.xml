@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.robin.unit.ble">
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--安卓6.0以及以上版本需要添加一个模糊定位的权限-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+</manifest>
