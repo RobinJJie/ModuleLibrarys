@@ -8,7 +8,7 @@ import java.util.Set;
  * @author lubin
  * @version 1.0
  */
-public interface BleListener {
+public interface BTListener {
     void onStart(boolean onRun);
     void onSearch(Set<BluetoothDevice> devices,BluetoothDevice newDevices);
 }

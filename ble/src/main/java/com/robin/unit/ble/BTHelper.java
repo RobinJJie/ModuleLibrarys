@@ -1,20 +1,36 @@
 package com.robin.unit.ble;
 
-import android.app.Activity;
 import android.content.Intent;
 
 /**
  * @author lubin
  * @version 1.0
  */
-public interface BleHelper {
+public interface BTHelper {
     /**
      * 初始化
      *
      * @return 初始化结果
      */
-    BleHelper init(boolean sysBleBroadcast,BleListener listener);
+    BTHelper init(boolean sysBleBroadcast, BTListener listener);
 
+    /**
+     * 设备是否支持蓝牙
+     * @return b
+     */
+    boolean isSupportBlue();
+
+    /**
+     * 是否打开
+     * @return b
+     */
+    boolean isBlueEnable();
+
+    /**
+     * GPS 是否开启
+     * @return b
+     */
+    boolean checkGPSIsOpen();
     /**
      * 启动蓝牙
      */
@@ -25,8 +41,20 @@ public interface BleHelper {
      */
     void closeBle();
 
+    /**
+     * 搜索新设备
+     */
     void searchNewBle();
 
+    /**
+     * 取消扫描
+     * @return b
+     */
+    boolean cancelScanBule();
+
+    /**
+     * 查看链接列表
+     */
     void searchBleList();
 
     /**

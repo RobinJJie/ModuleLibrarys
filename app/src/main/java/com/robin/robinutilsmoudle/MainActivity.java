@@ -10,20 +10,20 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.robin.unit.ble.BleAdapter;
-import com.robin.unit.ble.BleHelper;
-import com.robin.unit.ble.BleListener;
+import com.robin.unit.ble.BTAdapter;
+import com.robin.unit.ble.BTHelper;
+import com.robin.unit.ble.BTListener;
 
 import java.util.Set;
 
-public class MainActivity extends AppCompatActivity implements BleListener {
-    BleHelper bleHelper;
+public class MainActivity extends AppCompatActivity implements BTListener {
+    BTHelper bleHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bleHelper = BleAdapter.with(this).init(true,this);
+        bleHelper = BTAdapter.with(this).init(true,this);
         bleHelper.searchBleList();
         bleHelper.searchNewBle();
 

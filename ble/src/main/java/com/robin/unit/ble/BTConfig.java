@@ -5,7 +5,7 @@ package com.robin.unit.ble;
  * @version 1.0
  * 蓝牙配置参数
  */
-public interface BleConfig {
+public interface BTConfig {
     /**
      * 启动蓝牙 求情 code
      */
