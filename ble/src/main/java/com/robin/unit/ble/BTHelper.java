@@ -1,5 +1,6 @@
 package com.robin.unit.ble;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 
 /**
@@ -14,6 +15,7 @@ public interface BTHelper {
      */
     BTHelper init(boolean sysBleBroadcast, BTListener listener);
 
+    BluetoothAdapter getBluetoothAdapter();
     /**
      * 设备是否支持蓝牙
      * @return b

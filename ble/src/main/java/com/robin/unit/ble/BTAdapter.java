@@ -49,6 +49,11 @@ public class BTAdapter implements BTHelper {
     }
 
     @Override
+    public BluetoothAdapter getBluetoothAdapter() {
+        return mBluetoothAdapter;
+    }
+
+    @Override
     public boolean isSupportBlue() {
         return mBluetoothAdapter != null;
     }
