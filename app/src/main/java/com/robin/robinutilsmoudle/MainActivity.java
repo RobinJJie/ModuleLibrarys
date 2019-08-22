@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements BTListener {
             holder.txt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    ConnectThread thread = new ConnectThread(deviceList.get(position), bleHelper.getBluetoothAdapter(),UUID.randomUUID());
+                    ConnectThread thread = new ConnectThread(deviceList.get(position), bleHelper.getBluetoothAdapter(), UUID.randomUUID());
                     thread.start();
                     Toast.makeText(MainActivity.this, "ddd", Toast.LENGTH_SHORT).show();
                 }
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements BTListener {
         }
 
         public void add(BluetoothDevice device) {
-            if (!TextUtils.isEmpty(device.getName())){
+            if (!TextUtils.isEmpty(device.getName())) {
                 int size = deviceList.size();
                 deviceList.add(device);
                 notifyItemRangeInserted(size, 1);
