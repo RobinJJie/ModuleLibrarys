@@ -1,1 +1,1 @@
-include ':app', ':ble', ':badgenumber'
+include ':app', ':ble', ':badgenumber', ':easyplayer'
